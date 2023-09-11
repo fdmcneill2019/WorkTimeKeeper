@@ -73,7 +73,8 @@ class WorkTimer(tk.Frame):
             self.is_running = False
         self.total_hours, self.total_minutes, self.total_sec = 0, 0, 0
         self.time_display.config(text="00:00:00")
-    
+        
+    # To be fully implemented later
     def save_file(self):
         timesheet.write_to_csv_file()
     
