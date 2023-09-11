@@ -190,8 +190,8 @@ class TimeSheet:
             with open(self.filename, 'w', newline='') as csvfile:
                 writer = csv.writer(csvfile)
                 try:
-                    writer.writerow(body_fields)
-                    writer.writerow(row_list)
+                    writer.writerow(self.body_fields)
+                    writer.writerow(self.row_list)
                     csvfile.close()
                 except TypeError:
                     print("Header could not be written")
