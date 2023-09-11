@@ -18,7 +18,7 @@ class WorkTimer(tk.Frame):
         self.gui_components()
         self.time_entry = None
         self.fileurl = "PUT YOUR CSV FILE PATH HERE"
-        self.body_fields = ['date', 'Day of Week', 'Time Type','Time in', 'Time out', 'Duration', 'Comment']
+        self.body_fields = ['Date', 'Day of Week', 'Time Type','Time in', 'Time out', 'Duration', 'Comment']
         self.timesheet = TimeSheet(self.fileurl, self.body_fields) 
         
     def gui_components(self): 
@@ -53,7 +53,7 @@ class WorkTimer(tk.Frame):
     
         # Only executes if the user stops the timer
         if self.is_running:
-            self.time_display.after_cancel(self.new_time) # stops after()
+            self.time_display.after_cancel(self.new_time)
             self.is_running = False
             
             # Prompts user, asking them if they want to save their time
@@ -69,7 +69,7 @@ class WorkTimer(tk.Frame):
            
     def reset_timer(self):
         if self.is_running:
-            self.action_btn.after_cancel(self.new_time) # may be mistake
+            self.action_btn.after_cancel(self.new_time) 
             self.is_running = False
         self.total_hours, self.total_minutes, self.total_sec = 0, 0, 0
         self.time_display.config(text="00:00:00")
